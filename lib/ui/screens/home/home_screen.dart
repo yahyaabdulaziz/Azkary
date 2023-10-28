@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
           backgroundColor: AppColor.transparent,
           elevation: 0,
           title: Text(
-            "Islami",
+            "Azkary",
             style: AppTheme.appbartitletextstyle,
           ),
         ),
@@ -56,27 +56,28 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             selectedItemColor: AppColor.accent,
             iconSize: 30,
+            selectedFontSize: 20,
             items: const [
               BottomNavigationBarItem(
                   icon: ImageIcon(AssetImage(
                     AppAssets.icradio,
                   )),
-                  label: "radio"),
+                  label: "Radio"),
               BottomNavigationBarItem(
                   icon: ImageIcon(AssetImage(
                     AppAssets.icsebha,
                   )),
-                  label: "sebha"),
+                  label: "Sebha"),
               BottomNavigationBarItem(
                   icon: ImageIcon(AssetImage(
                     AppAssets.icahadeth,
                   )),
-                  label: "ahadeth"),
+                  label: "Ahadeth"),
               BottomNavigationBarItem(
                   icon: ImageIcon(AssetImage(
                     AppAssets.icquran,
                   )),
-                  label: "quran"),
+                  label: "Quran"),
             ]),
       );
 }
