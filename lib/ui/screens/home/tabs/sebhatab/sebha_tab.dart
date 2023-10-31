@@ -20,21 +20,21 @@ class _SebhaTabState extends State<SebhaTab> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(child: Image(image: AssetImage(AppAssets.icsebha_head))),
-          Image(image: AssetImage(AppAssets.icsebha_body)),
-          SizedBox(height: 12),
+          const Center(child: Image(image: AssetImage(AppAssets.icsebha_head))),
+          const Image(image: AssetImage(AppAssets.icsebha_body)),
+          const SizedBox(height: 12),
           Text(
             "عدد التسبيحات",
-            style: AppTheme.suranametextstyle,
+            style: Theme.of(context).textTheme.displayMedium,
           ),
-          SizedBox(height: 12),
+          const SizedBox(height: 12),
           Center(
             child: Container(
                 decoration: BoxDecoration(
                   color: AppColor.primarycolor,
                   borderRadius: BorderRadius.circular(18.0),
                 ),
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
                 child: Text(
                   " $tasbeh_count ",
                   style: const TextStyle(
@@ -54,11 +54,12 @@ class _SebhaTabState extends State<SebhaTab> {
                   color: AppColor.primarycolor,
                   borderRadius: BorderRadius.circular(40.0),
                 ),
-                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 18),
-                margin: EdgeInsets.only(top: 12),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 30, vertical: 18),
+                margin: const EdgeInsets.only(top: 12),
                 child: Text(
                   " $tasbeh_name ",
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 26,
                       color: Colors.black),

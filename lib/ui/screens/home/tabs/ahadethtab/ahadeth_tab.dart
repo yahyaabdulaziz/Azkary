@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../../../model/detail_screen_arg.dart';
 import '../../../../utilites/app_assets.dart';
 import '../../../../utilites/app_color.dart';
@@ -18,9 +18,9 @@ class AhadethTab extends StatelessWidget {
           thickness: 3,
           color: AppColor.primarycolor,
         ),
-        const Text(
-          "Hadeth Names",
-          style: AppTheme.suranametextstyle,
+        Text(
+          AppLocalizations.of(context)!.hadethName,
+          style: Theme.of(context).textTheme.displayMedium,
         ),
         const Divider(
           thickness: 3,
@@ -42,8 +42,10 @@ class AhadethTab extends StatelessWidget {
                   child: Text(
                     Constant.ahadethnames[index],
                     textAlign: TextAlign.center,
-                    style: AppTheme.suranametextstyle
-                        .copyWith(fontWeight: FontWeight.normal),
+                    style: Theme.of(context)
+                        .textTheme
+                        .displayMedium
+                        ?.copyWith(fontWeight: FontWeight.normal),
                   ),
                 );
               }),

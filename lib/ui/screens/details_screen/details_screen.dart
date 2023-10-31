@@ -1,9 +1,11 @@
 import 'package:azkary/ui/model/detail_screen_arg.dart';
+import 'package:azkary/ui/providers/settings_provider.dart';
 import 'package:azkary/ui/utilites/app_assets.dart';
 import 'package:azkary/ui/utilites/app_color.dart';
 import 'package:azkary/ui/utilites/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
 
 class DetailsScreen extends StatefulWidget {
   static const String routeName = "DetailsScreen";
@@ -20,21 +22,23 @@ class _DetailsScreenState extends State<DetailsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    SettingProvider provider = Provider.of(context);
+
     arguments = ModalRoute.of(context)!.settings.arguments as DetailsScreenArg;
     if (fileContent.isEmpty) readFile();
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage(AppAssets.mainbackground), fit: BoxFit.fill)),
+              image: AssetImage(provider.isDarkMode()
+                  ? AppAssets.mainbackground
+                  : AppAssets.backgrounddark),
+              fit: BoxFit.fill)),
       child: Scaffold(
         backgroundColor: AppColor.transparent,
         appBar: AppBar(
-          centerTitle: true,
-          backgroundColor: AppColor.transparent,
-          elevation: 0,
           title: Text(
             arguments.itemName,
-            style: AppTheme.appbartitletextstyle,
+            style: Theme.of(context).textTheme.displayMedium,
           ),
         ),
         body: fileContent.isEmpty
@@ -47,7 +51,10 @@ class _DetailsScreenState extends State<DetailsScreen> {
                     fileContent,
                     textDirection: TextDirection.rtl,
                     textAlign: TextAlign.center,
-                    style: AppTheme.contenttextstyle,
+                    style: Theme.of(context)
+                        .textTheme
+                        .displaySmall
+                        ?.copyWith(color: AppColor.white),
                   ),
                 ),
               ),

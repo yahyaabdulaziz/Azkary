@@ -5,6 +5,7 @@ import 'package:azkary/ui/utilites/app_color.dart';
 import 'package:azkary/ui/utilites/app_theme.dart';
 import 'package:azkary/ui/utilites/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class QuranTab extends StatelessWidget {
   const QuranTab({super.key});
@@ -19,10 +20,8 @@ class QuranTab extends StatelessWidget {
           thickness: 3,
           color: AppColor.primarycolor,
         ),
-        const Text(
-          "Sura Names",
-          style: AppTheme.suranametextstyle,
-        ),
+        Text(AppLocalizations.of(context)!.suraName,
+            style: Theme.of(context).textTheme.displayMedium),
         const Divider(
           thickness: 3,
           color: AppColor.primarycolor,
@@ -43,8 +42,10 @@ class QuranTab extends StatelessWidget {
                   child: Text(
                     Constant.suranames[index],
                     textAlign: TextAlign.center,
-                    style: AppTheme.suranametextstyle
-                        .copyWith(fontWeight: FontWeight.normal),
+                    style: Theme.of(context)
+                        .textTheme
+                        .displayMedium
+                        ?.copyWith(fontWeight: FontWeight.normal),
                   ),
                 );
               }),
