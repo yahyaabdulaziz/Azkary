@@ -54,7 +54,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                     style: Theme.of(context)
                         .textTheme
                         .displaySmall
-                        ?.copyWith(color: AppColor.white),
+                        ?.copyWith(color: Colors.black),
                   ),
                 ),
               ),

@@ -9,7 +9,7 @@ abstract class AppTheme {
       fontSize: 25, fontWeight: FontWeight.w600, color: AppColor.accent);
 
   static const contenttextstyle = TextStyle(
-      fontSize: 23, fontWeight: FontWeight.w300, color: AppColor.accent);
+      fontSize: 23, fontWeight: FontWeight.w300, color: Colors.black);
 
   static const settingtextstyle = TextStyle(
       fontSize: 26, fontWeight: FontWeight.w600, color: AppColor.accent);
@@ -21,7 +21,7 @@ abstract class AppTheme {
       scaffoldBackgroundColor: AppColor.transparent,
       primaryColor: AppColor.primarycolor,
       dividerTheme:
-          DividerThemeData(thickness: 3, color: AppColor.primarycolor),
+          const DividerThemeData(thickness: 3, color: AppColor.primarycolor),
       appBarTheme: const AppBarTheme(
           centerTitle: true,
           backgroundColor: AppColor.transparent,
@@ -31,7 +31,7 @@ abstract class AppTheme {
           selectedItemColor: AppColor.accent,
           selectedIconTheme: IconThemeData(size: 32),
           unselectedIconTheme: IconThemeData(size: 26)),
-      textTheme: TextTheme(
+      textTheme: const TextTheme(
         bodySmall: settingtextstyle,
         bodyMedium: switchtitletextstyle,
         displayMedium: suranametextstyle,
@@ -41,7 +41,7 @@ abstract class AppTheme {
   static ThemeData darkTheme = ThemeData(
     scaffoldBackgroundColor: AppColor.transparent,
     primaryColor: AppColor.primarydark,
-    dividerTheme: DividerThemeData(thickness: 3, color: AppColor.accentdark),
+    dividerTheme: const DividerThemeData(thickness: 3, color: AppColor.accentdark),
     appBarTheme: AppBarTheme(
         centerTitle: true,
         backgroundColor: AppColor.transparent,

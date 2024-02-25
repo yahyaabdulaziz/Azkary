@@ -2,7 +2,6 @@ import 'package:azkary/ui/model/detail_screen_arg.dart';
 import 'package:azkary/ui/screens/details_screen/details_screen.dart';
 import 'package:azkary/ui/utilites/app_assets.dart';
 import 'package:azkary/ui/utilites/app_color.dart';
-import 'package:azkary/ui/utilites/app_theme.dart';
 import 'package:azkary/ui/utilites/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';

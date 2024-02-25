@@ -1,16 +1,28 @@
-# azkary
+# Azkary App
 
-"Islami App"
+The Islamy app is a comprehensive Islamic application that provides access to the Quran, Hadith
+collections, Tasbeeh counter, and various settings for customization.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- **Quran:** Read, search, and listen to the Quran with translations in multiple languages.
+- **Hadith:** Access authentic Hadith collections for learning and reference.
+- **Tasbeeh:** Keep track of your daily dhikr with a digital Tasbeeh counter.
+- **Settings:** Customize the app according to your preferences, including themes, languages.
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![Screenshot_20240225_035759.jpg](screenshots%2FScreenshot_20240225_035759.jpg)
+![Screenshot_20240225_035805.jpg](screenshots%2FScreenshot_20240225_035805.jpg)
+![Screenshot_20240225_035812.jpg](screenshots%2FScreenshot_20240225_035812.jpg)
+![Screenshot_20240225_035814.jpg](screenshots%2FScreenshot_20240225_035814.jpg)
+![Screenshot_20240225_035816.jpg](screenshots%2FScreenshot_20240225_035816.jpg)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Packages
+
+- flutter_native_splash.
+- provider.
+
+Clone the repository:
+**path**
+git clone https://github.com/yahyaabdulaziz/Azkary.git
